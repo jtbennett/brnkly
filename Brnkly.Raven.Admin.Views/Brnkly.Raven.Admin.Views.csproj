@@ -128,7 +128,6 @@
     </Content>
     <Content Include="Content\images\brnkly-ajax-loader.gif" />
     <Content Include="Areas\Brnkly\Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Brnkly\Scripts\jquery-1.8.2.min.js" />
     <Content Include="Areas\Brnkly\Scripts\knockout-2.2.0.js" />
     <Content Include="Areas\Brnkly\Scripts\knockout.mapping-latest.js" />
     <Content Include="Areas\Brnkly\Scripts\linq.min.js" />
@@ -146,7 +145,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Areas\Brnkly\Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
@@ -171,7 +170,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Web.config" />
+    <Content Include="Areas\Brnkly\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Brnkly\Views\_ViewStart.cshtml" />

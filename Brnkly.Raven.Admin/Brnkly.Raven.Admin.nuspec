@@ -13,7 +13,9 @@
     <copyright>Copyright 2012 NBCNews.com and Brnkly contributors</copyright>
     <tags>Brnkly RavenDB</tags>
     <dependencies>
-      <dependency id="Brnkly" version="1.0" />
+      <dependency id="AutoMapper" version="2.2" />
+      <dependency id="Brnkly.Raven" version="1.0" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.0" />
       <dependency id="RavenDB.Client" version="2.0" />
     </dependencies>
   </metadata>

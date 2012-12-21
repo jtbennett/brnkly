@@ -40,7 +40,7 @@ namespace Brnkly.Raven.Admin
             bundles.Add(
                 new ScriptBundle("~/scripts/brnkly-js")
                 .Include(
-                    "~/Areas/Brnkly/Scripts/jquery-{version}.min.js",
+                    "~/Areas/Brnkly/Scripts/jquery-{version}.js",
                     "~/Areas/Brnkly/Scripts/bootstrap.js.min",
                     "~/Areas/Brnkly/Scripts/knockout-{version}.js",
                     "~/Areas/Brnkly/Scripts/knockout.mapping-latest.js",
