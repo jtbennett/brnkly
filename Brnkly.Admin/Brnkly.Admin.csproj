@@ -140,7 +140,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Scripts\BrnklyRaven.js" />
+    <Content Include="Scripts\brnkly-raven.js" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -172,9 +172,7 @@
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <None Include="Scripts\linq-vsdoc.js" />
-    <Content Include="Scripts\KnockoutBootstrapCheckboxBinding.js" />
-    <Content Include="Scripts\KnockoutBootstrapRadioBinding.js" />
-    <Content Include="Scripts\KnockoutDirtyFlag.js" />
+    <Content Include="Scripts\brnkly-knockout-extensions.js" />
     <Content Include="Scripts\linq.js" />
     <Content Include="Scripts\linq.min.js" />
     <Content Include="Web.config" />

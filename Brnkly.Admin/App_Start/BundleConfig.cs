@@ -14,22 +14,20 @@ namespace Brnkly.Admin
                         "~/Scripts/bootstrap-responsive.js",
                         "~/Scripts/knockout.js",
                         "~/Scripts/knockout.mapping-latest.js",
-                        "~/Scripts/KnockoutBootstrapCheckboxBinding.js",
-                        "~/Scripts/KnockoutBootstrapRadioBinding.js",
-                        "~/Scripts/KnockoutDirtyFlag.js",
                         "~/Scripts/linq.js"));
 
             bundles.Add(
                 new ScriptBundle("~/scripts/brnkly.js")
                     .Include(
-                        "~/Scripts/BrnklyRaven.js"));
+                        "~/Scripts/brnkly-knockout-extensions.js",
+                        "~/Scripts/brnkly-raven.js"));
 
             bundles.Add(
                 new StyleBundle("~/content/frameworks.css")
                     .Include(
                         "~/Content/bootstrap.css"));
 
-            bundles.Add(
+            bundles.Add(    
                 new StyleBundle("~/content/brnkly.css")
                     .Include(
                         "~/Content/Brnkly.css"));
