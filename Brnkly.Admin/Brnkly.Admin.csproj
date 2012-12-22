@@ -117,20 +117,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Areas\Raven\Controllers\BrnklyApiControllerActivator.cs" />
-    <Compile Include="Areas\Raven\Controllers\BrnklyApiControllerBase.cs" />
-    <Compile Include="Areas\Raven\Controllers\BrnklyApiControllerConfigAttribute.cs" />
-    <Compile Include="Areas\Raven\Controllers\IndexingController.cs" />
-    <Compile Include="Areas\Raven\Controllers\RavenController.cs" />
-    <Compile Include="Areas\Raven\Controllers\ReplicationController.cs" />
-    <Compile Include="Areas\Raven\Models\CopyIndexModel.cs" />
-    <Compile Include="Areas\Raven\Models\IndexModel.cs" />
-    <Compile Include="Areas\Raven\Models\InstanceModel.cs" />
-    <Compile Include="Areas\Raven\Models\RavenConfigModel.cs" />
-    <Compile Include="Areas\Raven\Models\StoreModel.cs" />
-    <Compile Include="Areas\Raven\RavenAreaRegistration.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\BrnklyApiControllerActivator.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\BrnklyApiControllerBase.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\BrnklyApiControllerConfigAttribute.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\IndexingController.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\RavenController.cs" />
+    <Compile Include="Areas\BrnklyRaven\Controllers\ReplicationController.cs" />
+    <Compile Include="Areas\BrnklyRaven\Models\CopyIndexModel.cs" />
+    <Compile Include="Areas\BrnklyRaven\Models\IndexModel.cs" />
+    <Compile Include="Areas\BrnklyRaven\Models\InstanceModel.cs" />
+    <Compile Include="Areas\BrnklyRaven\Models\RavenConfigModel.cs" />
+    <Compile Include="Areas\BrnklyRaven\Models\StoreModel.cs" />
+    <Compile Include="Areas\BrnklyRaven\RavenAreaRegistration.cs" />
+    <Compile Include="Areas\BrnklyRoot\BrnklyRootAreaRegistration.cs" />
+    <Compile Include="Areas\BrnklyRoot\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,31 +140,33 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Brnkly.Admin.nuspec" />
+    <Content Include="Content\brnkly-styles.css">
+      <DependentUpon>brnkly-styles.less</DependentUpon>
+    </Content>
+    <Content Include="Content\brnkly-styles.min.css">
+      <DependentUpon>brnkly-styles.less</DependentUpon>
+    </Content>
     <Content Include="Scripts\brnkly-raven.js" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Brnkly.css">
-      <DependentUpon>Brnkly.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Brnkly.min.css">
-      <DependentUpon>Brnkly.less</DependentUpon>
-    </Content>
-    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\brnkly-ajax-loader.gif" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Raven\Views\Web.config" />
-    <Content Include="Content\Brnkly.less" />
-    <Content Include="Areas\Raven\Views\Raven\_AddInstanceModal.cshtml" />
-    <Content Include="Areas\Raven\Views\Raven\_AddStoreModal.cshtml" />
-    <Content Include="Areas\Raven\Views\Raven\Index.cshtml" />
-    <Content Include="Areas\Raven\Views\Shared\_RavenSectionNav.cshtml" />
-    <Content Include="Areas\Raven\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BrnklyRaven\Views\Web.config" />
+    <Content Include="Content\brnkly-styles.less" />
+    <Content Include="Areas\BrnklyRaven\Views\Raven\_AddInstanceModal.cshtml" />
+    <Content Include="Areas\BrnklyRaven\Views\Raven\_AddStoreModal.cshtml" />
+    <Content Include="Areas\BrnklyRaven\Views\Raven\Index.cshtml" />
+    <Content Include="Areas\BrnklyRaven\Views\Shared\_RavenSectionNav.cshtml" />
+    <Content Include="Areas\BrnklyRaven\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BrnklyRoot\Views\Web.config" />
+    <Content Include="Areas\BrnklyRoot\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -182,14 +185,11 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BrnklyRoot\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\BrnklyRoot\Views\Home\Index.cshtml" />
+    <Content Include="Web.config.transform" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -215,9 +215,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>55336</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54724/</IISUrl>
+          <IISUrl>http://localhost:50000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

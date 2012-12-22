@@ -1,0 +1,5 @@
+﻿<configuration>
+  <connectionStrings>
+    <add name="Brnkly.Raven.Config" connectionString="Url=http://localhost:8080/databases/operations" />
+  </connectionStrings>
+</configuration>

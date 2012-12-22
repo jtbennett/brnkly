@@ -56,10 +56,18 @@ task CreateNuGetPackages -depends Compile {
 	& $brnkly.CopyNuspec;
 	& $brnkly.Pack;
 
-	$admin = New-NuGetPackager "Brnkly.Raven.Admin";
+	$fromRoot = "$buildartifacts_dir\_PublishedWebsites\Brnkly.Admin";
+	$admin = New-NuGetPackager "Brnkly.Admin";
 	& $admin.CopyDll;
+	& $admin.CopyContent "$fromRoot\Areas" "Areas" -Recurse
+	& $admin.CopyContent "$fromRoot\Content" "Content"
+	& $admin.CopyContent "$fromRoot\Content\brnkly*" "Content"
+	& $admin.CopyContent "$fromRoot\Content\images" "Content\images"
+	& $admin.CopyContent "$fromRoot\Content\images\brnkly*" "Content\images"
+	& $admin.CopyContent "$fromRoot\Scripts" "Scripts"
+	& $admin.CopyContent "$fromRoot\Scripts\brnkly*" "Scripts"
+	& $admin.CopyContent "$fromRoot\*.transform" "" -Recurse
 	& $admin.CopyNuspec;
-	& $admin.CopyContent "$base_dir\Brnkly.Raven.Admin.Views\Areas\Brnkly" "Areas\Brnkly" -Recurse
 	& $admin.Pack;
 }
 

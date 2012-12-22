@@ -230,7 +230,7 @@
         self.newInstance = {
             protocol: ko.observable('http'),
             host: ko.observable(''),
-            port: ko.observable('8081'),
+            port: ko.observable('8080'),
             virtualDirectory: ko.observable('')
         };
 

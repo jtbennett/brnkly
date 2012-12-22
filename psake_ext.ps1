@@ -53,6 +53,11 @@ function New-NuGetPackager
 			Copy-Item "$fromPath" "$nuget_dir\$projectName\Content\$contentRelativePath" -Recurse:$Recurse;
 		}.GetNewClosure();
 
+		CopyTools = {
+			param($fromPath, $toolsRelativePath, [Switch]$Recurse)
+			Copy-Item "$fromPath" "$nuget_dir\$projectName\Tools\$toolsRelativePath" -Recurse:$Recurse;
+		}.GetNewClosure();
+
 		Pack = {
 			exec { & "$base_dir\.nuget\nuget.exe" pack "$nuget_dir\$projectName\$($projectName).nuspec" -OutputDirectory $nuget_dir }
 		}.GetNewClosure();

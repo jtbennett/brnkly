@@ -1,4 +1,4 @@
-﻿using System.Web.Http;
+﻿﻿using System.Web.Http;
 
 namespace Brnkly.Admin
 {
@@ -8,7 +8,7 @@ namespace Brnkly.Admin
         {
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{area}/{controller}/{action}",
+                routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

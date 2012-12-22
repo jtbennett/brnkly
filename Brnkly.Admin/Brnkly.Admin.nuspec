@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Brnkly.Admin</id>
+    <version>1.0.07-alpha</version>
+    <authors>jtbennett</authors>
+    <owners>jtbennett</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://github.com/brnkly/brnkly</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An admin site to manage the runtime configuration consumed by Brnky.Raven.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2012 NBCNews.com and Brnkly contributors</copyright>
+    <tags>Brnkly RavenDB</tags>
+    <dependencies>
+      <dependency id="Brnkly.Raven" version="1.0" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.0" />
+      <dependency id="AutoMapper" version="2.2" />
+      <dependency id="jQuery" version="1.8" />
+      <dependency id="Knockout.Mapping" version="2.3" />
+      <dependency id="linq.js" version="2.2" />
+      <dependency id="Twitter.Bootstrap" version="2.1" />
+    </dependencies>
+  </metadata>
+</package>

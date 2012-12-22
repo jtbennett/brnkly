@@ -18,7 +18,7 @@ To see Brnkly in action:
 1. Clone the repo to your machine and open Brnkly.sln in VS 2012 (Brnkly uses .NET 4.5).
 2. Make sure that Visual Studio is configured to allow package restore, as described here: http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages
 3. Build the solution.
-4. Start a Raven instance at http://localhost:8081  The StartRaven.ps1 script in the root of the repo will do this for you.  Make sure you have successfully built the solution and that the repo root is the current working directory.
+4. Start a Raven instance at http://localhost:8080  The StartRaven.ps1 script in the root of the repo will do this for you.  Make sure you have successfully built the solution and that the repo root is the current working directory.
 4. Run the solution.
 
 The initial release of Brnkly is now in the "as-released" branch. That release was pretty close to how Brnkly is used at NBC News Digital.  However, it was too opinionated to be easily used for other purposes.  
